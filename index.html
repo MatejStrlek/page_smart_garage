@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Pametna garaža">
+    <meta name="keywords" content="Pametna garaža,Mobilna aplikacija,Aplikacija">
+    <meta name="author" content="Matej Galić">
+            
+    <title>Pametna garaža</title>
+    
+    <link rel="icon" href="slike/garage.png">
+    <link rel="stylesheet" href="index.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper" id="fade_prvi" style="display: none;">
+        <h1>PAMETNA GARAŽA</h1>
+    </div>
+
+    <br><br><br>
+
+    <div class="wrapper" id="buttonFadePrvi" style="display: none;">
+        <button id="buttonPrvi" class="buttonDiv">Pročitajte više</button>
+    </div>
+
+    <br><br>
+
+    <div class="wrapper margine" id="fade_drugi" style="display: none;">
+        <p>"Pametna garaža", odnosno pametno upravljanje parkirnim mjestima je ideja koja je 
+            nastala u Elektrotehničkoj školi. Zbog toga što je ideja odlična, odlučio sam raditi 
+            završni rad koji se tiče toga, točnije rečeno, odlučio sam raditi aplikaciju preko koje bi svi korisnici 
+            mogli imati informacije o svakoj garaži.</p>
+    </div>
+
+    <br><br>
+
+        <div class="wrapper" id="buttonFadeDrugi" style="display: none;">
+            <button id="buttonDrugi" class="buttonDiv"><a href="vise_detalja.html">Pogledajte jooš više detalja</a></button>
+        </div>
+
+</body>
+
+<script>
+
+    $(document).ready(function(){
+        $("#buttonPrvi").click(function(){
+            $("#fade_drugi").fadeToggle("slow");
+        });
+        $("#fade_prvi").delay(500).fadeIn(2000);
+        $("#buttonFadePrvi").delay(1000).fadeIn(2000);
+        $("#buttonFadeDrugi").delay(1000).fadeIn(2000);
+    });
+
+    
+</script>
+
+</html>

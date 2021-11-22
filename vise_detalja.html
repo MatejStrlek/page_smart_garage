@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Pametna garaža">
+    <meta name="keywords" content="Pametna garaža,,Aplikacija,Više detalja">
+    <meta name="author" content="Matej Galić">
+            
+    <title>Pametna garaža</title>
+    
+    <link rel="icon" href="slike/garage.png">
+    <link rel="stylesheet" href="vise_detalja.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="wrapper" id="fade_prvi" style="display: none;">
+        <h1>PAMETNA GARAŽA</h1>
+    </div>
+
+    <br>
+
+    <div class="wrapper" id="fade_drugi" style="display: none;">
+        <p>Ovako izgleda aplikacija nakon što se otvori.</p>
+    </div>
+
+    <br><br>
+
+    <div class="wrapper" id="buttonFadePrvi" style="display: none;">
+        <button id="show1" class="buttonDiv">Prikaži</button>
+    </div>
+
+    <br><br><br>
+
+    <div class="slika">
+        <img src="slike/interface.jpeg" alt="Aplikacija" id="prvaSlika">
+    </div>
+
+
+
+
+    <br><br><br><br>
+
+    <div class="wrapper" id="fade_treci" style="display: none;">
+        <p>Kako bi zapravo ušli u aplikaciju, moramo se prvo registrirati.</p>
+    </div>
+
+    <br><br>
+
+    <div class="wrapper" id="buttonFadeTreci" style="display: none;">
+        <button id="show2" class="buttonDiv">Registracija</button>
+    </div>
+
+    <br><br><br>
+
+    <div class="slika">
+        <img src="slike/registracija.jpeg" alt="Aplikacija" id="drugaSlika">
+    </div>
+
+
+
+
+    <br><br><br><br>
+
+    <div class="wrapper" id="fade_cetvrti" style="display: none;">
+        <p>Nakon registracije, logično, sad se možemo prijaviti i vidjeti kako to zapravo izgleda.</p>
+    </div>
+
+    <br><br>
+
+    <div class="wrapper" id="buttonFadeCetvrti" style="display: none;">
+        <button id="show3" class="buttonDiv">Prijava</button>
+    </div>
+
+    <br><br><br>
+
+    <div class="slika">
+        <img src="slike/prijava.jpeg" alt="Aplikacija" id="trecaSlika">
+    </div>
+
+
+
+
+    <br><br><br><br>
+
+    <div class="wrapper" id="fade_peti" style="display: none;">
+        <p>Ovako izgleda glavni dio aplikacije.</p>
+    </div>
+
+    <br><br>
+
+    <div class="wrapper" id="buttonFadePeti" style="display: none;">
+        <button id="show4" class="buttonDiv">Pogledajte</button>
+    </div>
+
+    <br><br><br>
+
+    <div class="slika">
+        <img src="slike/glavna.jpeg" alt="Aplikacija" id="cetvrtaSlika">
+    </div>
+
+
+
+
+    <br><br><br><br>
+
+    <div class="wrapper" id="fade_sedmi" style="display: none;">
+        <p>Svaka garaža ima ove podatke.</p>
+    </div>
+
+    <br><br>
+
+    <div class="wrapper" id="buttonFadeSedmi" style="display: none;">
+        <button id="show6" class="buttonDiv">Pogledajte</button>
+    </div>
+
+    <br><br><br>
+
+    <div class="slika">
+        <img src="slike/primjer.jpeg" alt="Aplikacija" id="sestaSlika">
+    </div>
+
+
+
+
+    <br><br><br><br>
+
+    <div class="wrapper" id="fade_sesti" style="display: none;">
+        <p>Možemo pogledati na mapi gdje se nalaze lokacije, a također i mi.</p>
+    </div>
+
+    <br><br>
+
+    <div class="wrapper" id="buttonFadeSesti" style="display: none;">
+        <button id="show5" class="buttonDiv">Škicnimo i to</button>
+    </div>
+
+    <br><br><br>
+
+    <div class="slika">
+        <img src="slike/karta.jpeg" alt="Aplikacija" id="petaSlika">
+    </div>
+
+    <br><br><br><br>
+
+    <div class="wrapper" id="buttonFadeDrugi" style="display: none;">
+        <button id="buttonPrvi" class="buttonDiv"><a href="index.html">Povratak natrag</a></button>
+    </div>
+
+</body>
+
+
+
+<script>
+
+    $(document).ready(function(){
+        $("#fade_prvi").fadeIn(2000).delay(2000).fadeTo("slow", 0.7);
+        $("#fade_drugi").fadeIn(2000);
+        $("#fade_treci").fadeIn(2000);
+        $("#fade_cetvrti").fadeIn(2000);
+        $("#fade_peti").fadeIn(2000);
+        $("#fade_sesti").fadeIn(2000);
+        $("#fade_sedmi").fadeIn(2000);
+
+        $("#buttonFadePrvi").fadeIn(2000);
+        $("#buttonFadeDrugi").fadeIn(2000);
+        $("#buttonFadeTreci").fadeIn(2000);
+        $("#buttonFadeCetvrti").fadeIn(2000);
+        $("#buttonFadePeti").fadeIn(2000);
+        $("#buttonFadeSesti").fadeIn(2000);
+        $("#buttonFadeSedmi").fadeIn(2000);
+
+        $("#prvaSlika").hide();
+        $("#drugaSlika").hide();
+        $("#trecaSlika").hide();
+        $("#cetvrtaSlika").hide();
+        $("#petaSlika").hide();
+        $("#sestaSlika").hide();
+
+
+        $("#show1").click(function(){
+            $("#prvaSlika").show(2000);
+        });
+
+        $("#show2").click(function(){
+            $("#drugaSlika").show(2000);
+        });
+
+        $("#show3").click(function(){
+            $("#trecaSlika").show(2000);
+        });
+
+        $("#show4").click(function(){
+            $("#cetvrtaSlika").show(2000);
+        });
+
+        $("#show5").click(function(){
+            $("#petaSlika").show(2000);
+        });
+
+        $("#show6").click(function(){
+            $("#sestaSlika").show(2000);
+        });
+
+    });
+     
+</script>
+
+</html>
